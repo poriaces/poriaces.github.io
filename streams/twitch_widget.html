@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+<link href="/static/css/streamers.css" media="screen" rel="stylesheet" type="text/css">
+<link type="text/css" href="//fonts.googleapis.com/css?family=Armata&subset=latin%2Clatin-ext" rel="stylesheet" />
+<script type="text/javascript" src="/static/js/twitchinfo.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+</head>
+    <body>
+        
+
+<div hidden>
+    <section class="streamer" data-user="" id="streamerTemplate">
+        <div class="portrait">
+            <a class="twitch-url" href="#">
+                <div class="online"></div>
+                <img class="logo" src="/static/img/profile/placeholder.png">
+                <div><span class="viewers"></span></div>
+            </a>
+        </div>
+        <div class="card">
+            <div>
+                <a class="twitch-url" href="">
+                    <span class="display-name"></span>
+                </a>
+                <span class="data">
+                    <span><img src="/static/open-iconic/svg/people.svg" alt="people"> <span class="followers"></span></span>
+                    <span><img src="/static/open-iconic/svg/eye.svg" alt="eye"> <span class="views"></span></span>
+                </span>
+            </div>
+            <div>
+                <span class="game"></span>
+            </div>
+            <div class="status"></div>
+        </div>
+    </section>
+</div>
+<div class="streamers">
+    <div class="streamers-title">
+        <a href="https://www.twitch.tv"><img src="/static/img/Twitch_White_RGB.png"></a>
+    </div>
+    <div class="streamers-container">
+        
+        <noscript>This content can't be displayed because your browser is blocking JavaScript.</noscript>
+    </div>
+    <div class="streamers-footer"></div>
+</div>
+<script type="text/javascript">
+function update() {
+    var scores = [];
+    query.users.forEach(function (user) {
+        twitchInfo(user, query.key, function(data, err) {
+            score = (data.stream ? data.stream.viewers * 1000 : 0) + (data.channel ? (data.channel.views * data.channel.followers) / 1000000 : 0);
+            var userElem = $('.streamer[data-user="' + user + '"]');
+
+            
+            if (err !== null) {
+                console.error(err);
+                userElem.find('.status').html('<span style="color:red;">Error updating data</span>');
+                scores.push({user: user, score: score});
+                return;
+            }
+
+
+            scores.push({user: user, score: score});
+
+            
+            
+            userElem.find('.logo').attr('src', data.stream ? data.stream.preview.medium : data.channel.logo);
+
+            
+            if (data.stream)
+                userElem.find('.viewers').html('<img src="/static/open-iconic/svg/person.svg" alt="person"> ' + data.stream.viewers);
+            else
+                userElem.find('.viewers').html('');
+
+            
+            userElem.find('.display-name').text(data.channel.display_name);
+
+            
+            userElem.find('.online').text(data.stream ? 'Live!' : '');
+
+            
+            if (data.stream)
+                userElem.find('.game').html('<img src="/static/open-iconic/svg/video.svg" alt="video"> ' + data.stream.game);
+            else
+                userElem.find('.game').html('');
+
+            
+            userElem.find('.status').text(data.channel.status);
+
+            
+            userElem.find('.followers').text(data.channel.followers);
+
+            
+            userElem.find('.views').text(data.channel.views);
+
+            if (Object.keys(scores).length === query.users.length) {
+                
+                scores.sort(function(a, b) {
+                    if (a.score > b.score)
+                        return -1;
+                    if (b.score > a.score)
+                        return 1;
+                    return 0;
+                });
+                scores.forEach(function (score) {
+                    $('.streamers-container').append($('.streamer[data-user="' + score.user + '"]'));
+                })
+            }
+        });
+    });
+}
+
+if (window.location.search.length > 0) {
+    
+    var query = {key: '', users: []};
+    window.location.search.substr(1).split('&').map(function(p) {
+        var kv = p.split('=');
+        return [kv[0], kv[1].split(',')];
+    }).forEach(function(kv) {
+        query[kv[0]] = kv[1].length ? kv[1].length > 1 ? kv[1].filter(String) : kv[1][0] : null;
+    });
+
+    
+    if (typeof query.users === "string") {
+        query.users = [query.users];
+    }
+    query.users.forEach(function (user) {
+        var sct = $('#streamerTemplate').clone();
+        sct.removeAttr('id');
+        sct.attr('data-user', user);
+        sct.find('.twitch-url').click(function() {
+            window.parent.open('https://www.twitch.tv/' + user, '_blank').focus();
+        });
+        $('.streamers-container').append(sct);
+    });
+    update();
+    window.setInterval(update, 1000 * 60 * 2);
+}
+
+</script>
+
+    </body>
+</html>

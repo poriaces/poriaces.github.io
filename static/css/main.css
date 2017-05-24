@@ -1,0 +1,91 @@
+html, body {
+    height: 100%;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+}
+
+.hero-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 60%;
+    min-height: 400px;
+    background-image: url("/static/img/bing.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+}
+
+.hero {
+    margin-left: -10%;
+    width: 60%;
+    transform: skewX(-10deg);
+    background-color: rgba(40, 40, 48, 0.95);
+    display: inline-block;
+    height: 12em;
+    box-shadow: 5px 5px 2px #030303;
+}
+
+.title {
+    float: right;
+    text-align: center;
+    vertical-align: middle;
+    margin-right: 0.5em;
+    font-size: 10em;
+    line-height: 1em;
+    letter-spacing: .05em;
+    color: #d42432;
+    display: table;
+    text-shadow: 2px 2px 3px black;
+}
+
+.topnav {
+    display: flex;
+    transform: skewX(-10deg);
+    list-style-type: none;
+    display: inline-block;
+    width: 45%;
+    margin: 1em;
+    padding: 0;
+    height: 2.5em;
+}
+
+.topnav li a {
+    display: inline-block;
+    width: 20%;
+    height: 100%;
+    float: right;
+    margin-left: 1em;
+    background-color: rgba(60, 60, 68, 0.75);
+    text-align: center;
+    line-height: 2em;
+    border-bottom: 2px solid white;
+    transition: 0.3s;
+}
+
+.topnav li a:hover {
+    background-color: rgba(100, 100, 108, 0.75);
+    border-bottom: 2px solid #d42432;
+}
+
+.topnav li.icon {
+    display: none;
+}
+
+.modal {
+    background-color: #282830;
+    margin: 1.5em;
+    color: #d42432;
+}
+
+.modal hr {
+    border-color: #d42432;
+}

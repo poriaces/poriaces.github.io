@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fi" class="grain">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="shortcut icon" type="image/x-icon" href="/static/img/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700" rel="stylesheet">
+    <link href="/static/css/blueprint.min.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/static/css/aces.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/static/css/main.css" media="screen" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    
+<title>Team</title>
+
+</head>
+    <body>
+        <div class="hero-wrapper">
+            <div class="hero"><span class="title">Aces</span></div>
+            <ul class="topnav">
+                <li><a class="active" href="/media/">Media</li></a>
+                <li><a class="active" href="/team/" data-locales='{"fi":"Joukkue"}'>Team</a></li></a>
+                <li><a class="active" href="/" data-locales='{"fi":"Etusivu"}'>Home</a></li></a>
+                <li class="icon"><a href="#">&#9776;</a></li></a>
+            </ul>
+        </div>
+        <div class="wrapper">
+        
+<div class="flex-row">
+	<div class="col-2@md col-1"></div>
+	<div class="col-8@md col-10 modal">
+		<div class="modal">
+			<hr>
+			<h1>Coming soon!</h1>
+			<hr>
+			<p>
+				Apologies; this content is not yet available.<br>
+				The lineup will be added here after it is announced.
+			</p>
+		</div>
+	</div>
+	<div class="col-2@md col-1"></div>
+</div>
+
+        </div>
+    </body>
+    <script type="text/javascript" src="/static/js/i11n.js"></script>
+    <script>
+    
+    $(".icon").click(function() {
+        var topnav = $(".topnav");
+        if (topnav.hasClass("responsive"))
+            topnav.removeClass("responsive");
+        else
+            topnav.addClass("responsive");
+    });
+    </script>
+</html>

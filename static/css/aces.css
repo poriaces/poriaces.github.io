@@ -1,0 +1,81 @@
+@font-face {
+    font-family: Prohibition;
+    src: url('/static/fonts/Prohibition Family/Prohibition Family/Fort Foundry - Prohibition.otf');
+}
+
+@font-face {
+    font-family: ProhibitionRound;
+    src: url('/static/fonts/Prohibition Family/Prohibition Family/Fort Foundry - Prohibition Round.otf');
+}
+
+@font-face {
+    font-family: ProhibitionOblique;
+    src: url('/static/fonts/Prohibition Family/Prohibition Family/Fort Foundry - Prohibition Oblique.otf');
+}
+
+@font-face {
+    font-family: ProhibitionLines;
+    src: url('/static/fonts/Prohibition Family/Prohibition Family/Fort Foundry - Prohibition Lines.otf');
+}
+
+@font-face {
+    font-family: ProhibitionLinesOblique;
+    src: url('/static/fonts/Prohibition Family/Prohibition Family/Fort Foundry - Prohibition Lines Oblique.otf');
+}
+
+html, body {
+    background-color: #c8c8cd;
+    color: #ffffff;
+    font-family: 'Oxygen', sans-serif;
+}
+
+body {
+    background-image: url('/static/img/noise-min.png');
+}
+
+h1, h2, h3, .title {
+    font-family: ProhibitionRound;
+    font-size: 3em;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.lines {
+    font-family: ProhibitionLines;
+}
+
+.lines-oblique {
+    font-family: ProhibitionLinesOblique;
+}
+
+.grafiitti {
+    background-color: #282830;
+}
+
+.punainen {
+    background-color: #d42432;
+}
+
+.harmaa60 {
+    background-color: #3c3c44;
+}
+
+.harmaa100 {
+    background-color: #64646c;
+}
+
+.harmaa200 {
+    background-color: #c8c8cd;
+}
+
+.valkoinen {
+    background-color: #ffffff;
+}
+
+.logo {
+    background-image: url("/static/img/logoleft.png");
+    background-repeat: no-repeat;
+}
