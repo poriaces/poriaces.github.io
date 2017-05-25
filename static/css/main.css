@@ -80,9 +80,17 @@ body {
     display: none;
 }
 
+.hero-separator {
+    height: 0.5em;
+    background-color: rgba(0, 0, 0, .6);
+    filter: blur(4px);
+    margin-top: -0.25em;
+}
+
 .modal {
     background-color: #282830;
     margin: 1.5em;
+    padding: 1.5em:
     color: #d42432;
 }
 
