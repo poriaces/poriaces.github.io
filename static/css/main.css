@@ -44,6 +44,7 @@ body {
 }
 
 .topnav li a {
+    color: #ffffff;
     display: inline-block;
     width: 20%;
     height: 100%;
@@ -82,11 +83,19 @@ body {
     border-color: #d42432;
 }
 
+.modal h3 {
+    font-size: 1.5em;
+}
+
 .wrapper {
     padding-top: 2em;
 }
 
-@media only screen and (max-width: 470px) {
+.mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 480px) {
       .title {
           font-size: 4em;
       }
@@ -95,7 +104,17 @@ body {
       }
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (max-width: 960px) {
+    /* Hide widgets and show mobile substitutes */
+    .widget {
+        display: none;
+    }
+    .mobile {
+        display: inherit;
+    }
+}
+
+@media only screen and (min-width: 960px) {
     .wrapper {
         background-image: url('/static/img/noise-min.png');
     }
