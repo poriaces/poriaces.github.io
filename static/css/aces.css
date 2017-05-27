@@ -29,10 +29,6 @@ html, body {
     font-family: 'Oxygen', sans-serif;
 }
 
-body {
-    background-image: url('/static/img/noise-min.png');
-}
-
 h1, h2, h3, .title {
     font-family: ProhibitionRound;
     font-size: 3em;
