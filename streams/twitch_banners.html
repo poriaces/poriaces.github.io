@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+<title>Aces</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link rel="shortcut icon" type="image/x-icon" href="/static/img/favicon.ico" />
+<link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700" rel="stylesheet">
+<link href="/static/css/blueprint.min.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/static/css/aces.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/static/css/main.css" media="screen" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<style>
+.twitch-banner {
+    position: relative;
+    width: 320px;
+    padding: 0.5em;
+}
+
+.twitch-banner hr {
+    margin: 0;
+}
+
+.twitch-banner h3 {
+    margin: 0;
+    font-size: 2em;
+    height: 2em;
+    line-height: 2em;
+}
+</style>
+
+</head>
+    <body>
+        
+<div class="hero-wrapper">
+    <div class="hero"><span class="title"></span></div>
+</div>
+<div class="modal twitch-banner">
+    <hr>
+    <h3>About</h3>
+    <hr>
+</div>
+<div class="modal twitch-banner">
+    <hr>
+    <h3>Social</h3>
+    <hr>
+</div>
+<div class="modal twitch-banner">
+    <hr>
+    <h3>Gear</h3>
+    <hr>
+</div>
+<div class="modal twitch-banner">
+    <hr>
+    <h3>Settings</h3>
+    <hr>
+</div>
+<div class="modal twitch-banner">
+    <hr>
+    <h3>Donate</h3>
+    <hr>
+</div>
+<div class="modal twitch-banner">
+    <hr>
+    <h3>FAQ</h3>
+    <hr>
+</div>
+<script>
+$(document).ready(function() {
+    $('.title').text(prompt("Enter your nickname"))
+});
+</script>
+
+    </body>
+</html>
