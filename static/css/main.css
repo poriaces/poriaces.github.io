@@ -74,6 +74,7 @@ body {
 }
 
 .modal {
+    min-height: 300px;
     background-color: #282830;
     padding: 1.5em;
     color: #d42432;
@@ -93,6 +94,9 @@ body {
 
 .mobile {
     display: none;
+}
+
+.widget {
 }
 
 @media only screen and (max-width: 480px) {
