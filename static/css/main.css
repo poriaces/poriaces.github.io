@@ -29,6 +29,7 @@ body {
 }
 
 .title {
+    margin: auto;
     letter-spacing: .05em;
     color: #d42432;
     display: table;
@@ -85,7 +86,6 @@ body {
 @media only screen and (max-width: 470px) {
       .title {
           font-size: 4em;
-          margin: auto;
       }
       .hero {
           height: 5em;
