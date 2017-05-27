@@ -74,13 +74,16 @@ body {
 
 .modal {
     background-color: #282830;
-    margin: 1.5em;
     padding: 1.5em;
     color: #d42432;
 }
 
 .modal hr {
     border-color: #d42432;
+}
+
+.wrapper {
+    padding-top: 2em;
 }
 
 @media only screen and (max-width: 470px) {
