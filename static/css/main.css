@@ -93,7 +93,7 @@ body {
 }
 
 @media only screen and (min-width: 900px) {
-    body {
+    .wrapper {
         background-image: url('/static/img/noise-min.png');
     }
 
