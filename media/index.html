@@ -9,6 +9,8 @@
     <link href="/static/css/blueprint.min.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="/static/css/aces.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="/static/css/main.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/static/css/twitch-alert.css" media="screen" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/static/js/twitchinfo.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     
 <title>Media</title>
@@ -33,6 +35,8 @@
             </ul>
         </div>
         <div class="hero-separator"></div>
+        <a data-template class="streamer"><img><span></span></a>
+        <div class="twitch-alert"></div>
         <div class="wrapper">
         
 <div class="flex-row">
@@ -54,6 +58,7 @@
         </div>
     </body>
     <script type="text/javascript" src="/static/js/i11n.js"></script>
+    <script type="text/javascript" src="/static/js/twitch-alert.js"></script>
     <script>
     
     $(".icon").click(function() {
