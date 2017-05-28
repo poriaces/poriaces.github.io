@@ -96,9 +96,6 @@ body {
     display: none;
 }
 
-.widget {
-}
-
 @media only screen and (max-width: 480px) {
       .title {
           font-size: 4em;
