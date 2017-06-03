@@ -1,0 +1,12 @@
+.profile {
+    display: flex;
+    padding: 1em;
+}
+
+.profile img {
+    height: 200px;
+}
+
+.profile span {
+    margin: 1em;
+}
