@@ -1,6 +1,6 @@
 var streamersUpdate = function() {
     var key = "ph06xyfig2wp3z4qzz2mv6y49caq6un";
-    var users = ["MrHamsterOW", "r0n5k1", "TipiOW", "karvarausku"];
+    var users = ["MrHamsterOW", "r0n5k1", "TipiOW"];
     $(".twitch-alert").empty();
     users.forEach(function (user) {
         twitchInfo(user, key, function(data, err) {
